@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إلى هالة ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo', sans-serif;
+}
+
+body{
+    background: #0f0f1a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* خلفية احترافية */
+.bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background: radial-gradient(circle at top,#ff4d6d33,#000);
+    z-index:-1;
+}
+
+/* شاشة الدخول */
+.login{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.login-box{
+    background:rgba(255,255,255,0.08);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter: blur(15px);
+    box-shadow:0 0 30px rgba(255,77,109,0.2);
+}
+
+.login h1{
+    margin-bottom:10px;
+    font-size:2.5rem;
+}
+
+input{
+    margin-top:15px;
+    padding:12px;
+    width:250px;
+    border:none;
+    border-radius:12px;
+    text-align:center;
+    outline:none;
+}
+
+button{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    background:#ff4d6d;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* الموقع */
+#site{
+    display:none;
+}
+
+/* هيرو */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:#ff4d6d;
+}
+
+.hero p{
+    margin-top:10px;
+    opacity:0.8;
+}
+
+/* الأقسام */
+.section{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    margin:20px 0;
+    border-radius:18px;
+    backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.card h2{
+    color:#ff4d6d;
+    margin-bottom:15px;
+}
+
+/* قائمة حب */
+.love-list p{
+    margin:10px 0;
+    font-size:1.1rem;
+    opacity:0.9;
+}
+
+/* جاليري */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.photo{
+    border-radius:15px;
+    overflow:hidden;
+    position:relative;
+}
+
+.photo img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:0.3s;
+}
+
+.photo:hover img{
+    transform:scale(1.1);
+}
+
+/* رسالة سرية */
+.secret-btn{
+    background:#ff4d6d;
+    padding:12px 20px;
+    border-radius:12px;
+    border:none;
+    cursor:pointer;
+}
+
+.secret{
+    display:none;
+    margin-top:15px;
+    font-size:1.2rem;
+    color:#fff;
+    opacity:0.9;
+}
+
+/* قلوب */
+.heart{
+    position:fixed;
+    top:-10px;
+    color:#ff4d6d;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<!-- Login -->
+<div class="login" id="login">
+    <div class="login-box">
+        <h1>❤️ إلى هالة</h1>
+        <p>اكتبي كلمة السر للدخول</p>
+
+        <input type="password" id="pass" placeholder="فتاتى">
+        <br>
+        <button onclick="login()">دخول</button>
+    </div>
+</div>
+
+<!-- Site -->
+<div id="site">
+
+<div class="hero">
+    <h1>هالة ❤️</h1>
+    <p>أجمل حاجة حصلت في حياتي</p>
+</div>
+
+<div class="section">
+
+<div class="card">
+    <h2>رسالة</h2>
+    <div class="love-list">
+        <p>بحبك بكل تفاصيلك.</p>
+        <p>وجودك بيطمني.</p>
+        <p>انتي اختياري الوحيد.</p>
+        <p>كل يوم معاكي أحلى من اللي قبله.</p>
+    </div>
+</div>
+
+<div class="card">
+    <h2>ذكريات</h2>
+
+    <div class="gallery">
+
+        <div class="photo">
+            <img src="تنزيل.jpeg">
+        </div>
+
+        <div class="photo">
+            <img src="images.jpeg">
+        </div>
+
+        <div class="photo">
+            <img src="images(1).jpeg">
+        </div>
+
+    </div>
+</div>
+
+<div class="card">
+    <h2>كلمة أخيرة</h2>
+    <p>
+        وجودك في حياتي مش صدفة...
+        ده أجمل اختيار حصل.
+    </p>
+</div>
+
+<div class="card">
+    <button class="secret-btn" onclick="showSecret()">افتحي الرسالة السرية</button>
+
+    <div class="secret" id="secret">
+        بحبك ❤️ ومش عايز غيرك — محمد
+    </div>
+</div>
+
+</div>
+</div>
+
+<script>
+
+function login(){
+    let pass = document.getElementById("pass").value;
+
+    if(pass === "فتاتي"){
+        document.getElementById("login").style.display="none";
+        document.getElementById("site").style.display="block";
+    }else{
+        alert("كلمة السر غلط ❤️");
+    }
+}
+
+function showSecret(){
+    document.getElementById("secret").style.display="block";
+}
+
+// قلوب
+setInterval(()=>{
+    let heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(16+Math.random()*20)+"px";
+    heart.style.animationDuration=(4+Math.random()*4)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>heart.remove(),8000);
+},500);
+
+</script>
+
+</body>
+</html>
